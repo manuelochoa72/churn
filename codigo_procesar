@@ -1,0 +1,139 @@
+ private void jBProcesarActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    // se utiliza la variable PlanInt y VoiceMailPlan para obtener los valores de los combobox
+    String PlanInt=jCBPlanInt.getSelectedItem().toString(); 
+    String VoiceMailPlan=jCBVmp.getSelectedItem().toString();  
+        
+        /** se utiliza try y catch por si se produce un error y no pare el programa y se pueda corregir */
+    String Sefuga="Se Fuga el ciente: \n Ofrecer una promoción por 3 meses\n" +  PlanInt + "\n"+  
+                 VoiceMailPlan + "\n"+ jTFNvm.getText() + "\n"+ jTFTdm.getText();
+     
+    String NoSefuga="No se fuga el cliente: \n Dar minitos gratis por su permanencia\n" +  PlanInt + "\n"+  
+                 VoiceMailPlan + "\n"+ jTFNvm.getText() + "\n"+ jTFTdm.getText();
+        try{
+
+            if(Double.parseDouble(jTFTdm.getText())<=264.4)
+            {
+                if(Double.parseDouble(jTFCsc.getText())<=3)
+                        {
+
+                            if(PlanInt == "No") {
+                                                    JOptionPane.showMessageDialog(null,NoSefuga);
+                            }
+                            else {
+                                if(Double.parseDouble(jTFTic.getText())<=2){
+                                    JOptionPane.showMessageDialog(null,Sefuga);
+                                }
+                                else{
+                                    if(Double.parseDouble(jTFTim.getText())<=13) { JOptionPane.showMessageDialog(null,NoSefuga);}
+                                    else { JOptionPane.showMessageDialog(null,Sefuga);}
+                                }
+
+                            }
+                        }
+                else {
+                    if(Double.parseDouble(jTFTdm.getText())<=160){
+                        if(Double.parseDouble(jTFTem.getText())<=233.2) JOptionPane.showMessageDialog(null,Sefuga);
+                        else {
+                            if(Double.parseDouble(jTFTdm.getText())<=120.3)JOptionPane.showMessageDialog(null,Sefuga);
+                            else {
+                                if(Double.parseDouble(jTFTnm.getText())<=207.2) JOptionPane.showMessageDialog(null,NoSefuga);
+                                else {
+                                    if(Double.parseDouble(jTFTdm.getText())<=135.9) JOptionPane.showMessageDialog(null,Sefuga);
+                                    else JOptionPane.showMessageDialog(null,NoSefuga);
+                                }
+                            }
+                        }
+                    }
+                    else {
+                        if(Double.parseDouble(jTFTem.getText())<=141.4) {
+                            if(Double.parseDouble(jTFTec.getText())<=124){
+                                if(Double.parseDouble(jTFTdm.getText())<=199.5){ JOptionPane.showMessageDialog(null,Sefuga);}
+                                else {
+                                    if(Double.parseDouble(jTFTem.getText())<=120.5) JOptionPane.showMessageDialog(null,Sefuga);
+                                    else JOptionPane.showMessageDialog(null,NoSefuga);
+                                }
+                            }
+                            else { JOptionPane.showMessageDialog(null,NoSefuga);}
+                        }
+                        else {
+                            if(Double.parseDouble(jTFTdm.getText())<=175.7){
+                                if(Double.parseDouble(jTFTem.getText())<=211.8){
+                                    if(Double.parseDouble(jTFTnm.getText())<=216.5) {JOptionPane.showMessageDialog(null,Sefuga);}
+                                    else {
+                                        if(Double.parseDouble(jTFTem.getText())<=179.3) {JOptionPane.showMessageDialog(null,Sefuga);}
+                                        else {JOptionPane.showMessageDialog(null,NoSefuga);}
+                                    }
+                                }
+                                else { JOptionPane.showMessageDialog(null,NoSefuga);}
+                            }
+                            else {
+                                if (PlanInt == "No") {
+                                    if(Double.parseDouble(jTFTnc.getText())<=99) { JOptionPane.showMessageDialog(null,NoSefuga);}
+                                    else {
+                                        if (Double.parseDouble(jTFTim.getText())<=8.4){
+                                            if (Double.parseDouble(jTFTnc.getText())<=107) { JOptionPane.showMessageDialog(null,NoSefuga);}
+                                            else {
+                                                if(VoiceMailPlan=="No") { JOptionPane.showMessageDialog(null,Sefuga);}
+                                                else {JOptionPane.showMessageDialog(null,NoSefuga);}
+                                            }
+                                        }
+                                        else { JOptionPane.showMessageDialog(null,NoSefuga);}
+                                    }
+                                }
+                                else {
+                                    if(Double.parseDouble(jTFTem.getText())<=234.3){
+                                        if(Double.parseDouble(jTFTem.getText())<=198.6) {JOptionPane.showMessageDialog(null,NoSefuga);}
+                                        else { JOptionPane.showMessageDialog(null,NoSefuga);}
+                                    }
+                                    else { JOptionPane.showMessageDialog(null,Sefuga);}
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+            else {
+                if(VoiceMailPlan == "No") {
+                    if(Double.parseDouble(jTFTem.getText())<= 187.5){
+                    if(Double.parseDouble(jTFTdm.getText())<= 277.5){
+                        if (Double.parseDouble(jTFTnm.getText())<= 220.8) { JOptionPane.showMessageDialog(null,NoSefuga);}
+                        else {
+                            if(Double.parseDouble(jTFTdm.getText())<=268.4){
+                                if(Double.parseDouble(jTFTem.getText())<=153.6) {JOptionPane.showMessageDialog(null,NoSefuga);}
+                                else { JOptionPane.showMessageDialog(null,Sefuga);}
+                            }
+                            else JOptionPane.showMessageDialog(null,NoSefuga);
+                        }
+                    }
+                    else {
+                        if(Double.parseDouble(jTFTem.getText())<=137.9) {
+                            if(PlanInt == "No") { JOptionPane.showMessageDialog(null,NoSefuga);}
+                            else { JOptionPane.showMessageDialog(null,NoSefuga);} 
+                        }
+                        else {
+                            if(Double.parseDouble(jTFTnm.getText())<=150.6){
+                                if(Double.parseDouble(jTFTdc.getText())<=61) { JOptionPane.showMessageDialog(null,Sefuga);}
+                                else { JOptionPane.showMessageDialog(null,NoSefuga);}
+                            }
+                            else { JOptionPane.showMessageDialog(null,Sefuga);}
+                        }
+                    }
+                }
+                    else { JOptionPane.showMessageDialog(null,Sefuga);}
+                }
+                else {
+                    if(PlanInt == "No") {JOptionPane.showMessageDialog(null,NoSefuga);}
+                    else {
+                        if (Double.parseDouble(jTFTdm.getText())<=271.5) { JOptionPane.showMessageDialog(null,Sefuga);}
+                        else JOptionPane.showMessageDialog(null,NoSefuga);
+                    }
+                }
+            } 
+
+        }
+    catch(Exception ex){
+       
+        JOptionPane.showMessageDialog(null, "Verificar los datos: \n  falta de datos \n o dato incorrecto ");
+    }
+    }      
